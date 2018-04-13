@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    title= DemoSurvey
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    //- use webpack to combine stylesheets
+    link(rel="stylesheet", type="text/css", href="css/global.css")
+    link(rel="stylesheet", type="text/css", href="css/survey.css")
+    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+
+  body
+    div.container
+      div#survey_header
+        h1 Hipster Personality Test
+        h2 Pick your vintage affinity
+      form#survey_form
+        div#survey_options.survey_page.col
+          div.row
+            div.survey_option.col-sm-4
+              div.survey_tile(data-id="1")
+                label
+                  input(type="radio", name="images", value="Rolleiflex")
+                  img(src="/images/rolleiflex.jpg")
+                h3 Rolleiflex Camera
+            div.survey_option.col-sm-4
+              div.survey_tile(data-id="2")
+                label
+                  input(type="radio", name="images", value="Fiat")
+                  img(src="/images/fiat.jpg")
+                h3 Fiat Resto-mod
+            div.survey_option.col-sm-4
+              div.survey_tile(data-id="3")
+                label
+                  input(type="radio", name="images", value="DC-3")
+                  img(src="/images/dc-3.jpg")
+                h3 Icelandic Crashsite
+          div.row
+            div.form_action.col-12
+              button#step_1.btn.btn-primary(type="button" disabled) next
+        div#survey_email.survey_page.col
+          label.email
+            div Email
+            input(type="text" name="email_address")
+          div.row.justify-content-md-center
+            div.col-6.email_disclaimer We respect your privacy. We do not sell or share your email address.
+          div.row
+            div.form_action.col-12
+              button#step_2.btn.btn-success next
+      div#thankyou Thank you!
+      div.footer.row
+        div.disclaimer.col-12
+          p We respect your privacy. We do not sell or share your email address.
+          p This hipster diagnosis tool is meant for educational purposes only. Please see your doctor for qualified medical advice.
+          p 
+            a#privacy(href="#") GDRP and Privacy Polciy
+          div#gdrp_terms 
+            include ./includes/terms.jade   
+
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+script(src="/scripts/jquery.validate.min.js")
+script(src="/scripts/global.js")
+script(src="/scripts/survey.js")

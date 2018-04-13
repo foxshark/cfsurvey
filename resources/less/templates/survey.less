@@ -1,0 +1,65 @@
+@import "resources/less/global/lib.less";
+
+#survey_header {
+	text-align: center;
+
+	h1 {
+		color: @mediumGray;
+		font-size: 24px;
+	}
+
+	h2 {
+		color: @mediumGray;
+		font-size: 16px;
+	}
+}
+
+#survey_email {
+	display: none;
+}
+
+div.survey_page {
+	background-color: lighten(@lightGray, 20%);
+	border: 2px solid @lightGray;  
+	border-radius: 5px;
+	text-align: center;
+	padding: 20px;
+}
+
+form#survey_form {
+	div.survey_option {
+		div.survey_tile {
+			margin: 0 auto 20px auto;
+			width:150px;
+			background-color: @lightGray;
+			border: 2px solid @mediumGray;  
+			border-radius: 5px;
+			text-align: center;
+
+			label {
+				& > input {
+					visibility: hidden;
+					position: absolute;
+
+					&:checked + img{
+						border:4px dashed @actionBlue;
+					}
+				}
+
+				img{
+					border:4px solid transparent;
+					margin: 20px 32px;
+				}
+			}
+
+			h3 {
+				font-size: 14px;
+				font-weight: bold;
+			}
+		}
+	}
+
+	div.form_action {
+		text-align: center;
+	}
+}

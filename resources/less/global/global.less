@@ -1,0 +1,51 @@
+@import "resources/less/global/lib.less";
+
+body {
+  background: ligten(@lightGray, 40%);
+}
+
+.email_disclaimer, #thankyou {
+	background-color: @notifications;
+	color: darken(@notifications, 40%);
+	border: 2px dotted darken(@notifications, 40%);
+	padding: 5px;
+	margin: 10px 20px;
+	font-size: 10px;
+	text-align: center;
+	display: none;
+}
+
+#thankyou {
+	display: none;
+}
+
+.footer {
+	margin-top: 20px;
+	font-size: 10px;
+	color: @lightGray;
+
+	p {
+		margin: 0 0 5px 0;
+	}
+
+	a {
+		color: #333;
+		text-decoration: none;
+	}
+
+	h5 {
+		font-size: 18px;
+		background-color: #DDD;
+	}
+}
+
+#gdrp_terms {
+	display: none;
+	margin-top: 20px;
+}
+
+div.error, label.error {
+	color: @error;
+	font-size: 12px;
+	margin: 5px;
+}
